@@ -1,0 +1,154 @@
+.port {
+    width: 100%;
+    height: 100%;
+    
+    & h1, & h3 {
+        margin-top: $small;
+        text-align: center;
+    }
+
+    & h3 {
+        color: $red;
+    }
+
+    & h1 {
+        padding: $small;
+    }
+
+    &-cont {
+        width: 100%;
+        height: 100%;
+        padding: $big;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        &-card {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding: $small;
+            margin: $small;
+            margin-top: .5rem;
+            border: 2px solid $darkBlue;
+            border-radius: 25px;
+
+            &-img {
+                height: 300px;
+                width: 100%;
+                border-radius: 25px;
+            }
+
+            &-text {
+                display: flex;
+                flex-direction: column;
+                gap: .8rem;
+                color: $darkBlue;
+
+                & h2 {
+                    border-bottom: 1px solid $darkBlue;
+                }
+
+                & p {
+                    opacity: .6;
+                 
+                }
+
+                &-btn {
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 2rem;
+                }
+            }
+        }
+    }
+}
+
+#btn-example {
+    font-size: .8rem;
+    background-color: $darkBlue;
+}
+
+#btn-interest {
+    font-size: 1rem;
+}
+
+.first {
+    background: url(../images/horseracing.avif);
+    background-size: cover;
+}
+
+.second {
+    background: url(../images/horseracing4.avif);
+    background-size: cover;
+}
+
+.third {
+    background: url(../images/horseracing3.avif);
+    background-size: cover;
+}
+.fourth {
+    background: url(../images/copy.avif);
+    background-size: cover;
+}
+.fifth {
+    background: url(../images/woods.avif);
+    background-size: cover;
+}
+.sixth {
+    background: url(../images/web.avif);
+    background-size: cover;
+}
+
+#footer-port {
+    display: block;
+    top: 1400px;
+}
+
+@media screen and (max-width: 1300px) {
+    .port-cont {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #footer-port {
+        top: 2000px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .port-cont {
+        padding: $small;
+        grid-template-columns: 1fr;
+    }
+
+    .port-cont-card-text-btn {
+        justify-content: flex-start;
+    }
+
+    #footer-port {
+        top: 3500px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .port-cont {
+        padding: 0px;
+
+        &-card {
+            padding: 5px;
+        }
+    }
+
+    .port-cont-card-text-btn {
+        gap: .5rem;
+    }
+
+    #footer-port {
+        top: 3800px;
+    }
+
+    .footer-cont {
+        flex-direction: column;
+        align-items: center;
+
+    }
+}

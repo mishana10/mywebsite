@@ -1,0 +1,22 @@
+.footer {
+    position: absolute;
+    width: 100%;
+
+    &-cont {
+        padding: .5rem 6rem;
+        background-color: $darkBlue;
+        color: $white;
+        display: flex;
+        border-top: 2px solid $white;
+        justify-content: space-between;
+
+        &-icons {
+            display: flex;
+            gap: .8rem;
+        }
+    }
+
+    & p {
+        opacity: .8;
+    }
+}

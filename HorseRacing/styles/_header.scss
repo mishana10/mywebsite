@@ -1,0 +1,105 @@
+.header {
+    height: 700px;
+    width: 100%;
+    background-image: url(../images/horseracing2.jpg);
+    background-size: cover;
+    top: 0;
+    bottom: 0;
+    position: relative;
+    z-index: 0;
+
+    &::after {
+        content: "";
+        top: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(0,0,0,.9), rgba(0,0,0,0.3));
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;
+    }
+
+    &-cont {
+        padding: $small;
+        display: flex;
+        flex-direction: column;
+        gap: 15rem;
+        color: white;
+
+        &-nav {
+            display: flex;
+            justify-content: space-between;
+            z-index: 2;
+            padding: 0 3rem;
+
+            & h1 {
+                font-family: $ubuntu;
+            }
+
+            &-menu {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                font-size: 1.1rem;
+
+                & a {
+                    text-decoration: none;
+                    color: white;
+                    transition: all .1s ease-in;
+                    
+                    &:hover {
+                        color: $color;
+                    }
+                }
+            }
+        }
+
+        &-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: .8rem;
+            z-index: 2;
+
+            & h4, & h3 {
+                opacity: .8;
+            }
+
+            & h1 {
+                font-family: $ubuntu;
+                text-align: center;
+                width: 100%;
+                border-bottom: 2px solid rgba(250,250,250,0.7);
+                
+                    & a {
+                        text-decoration: none;
+                        color: $color;
+                        transition: all .1s ease-in;
+
+                        &:hover {
+                            color: white;
+                        }
+                    }
+                    
+                
+            }
+        }
+    }
+}
+
+.btn {
+    border: none;
+    border-radius: 25px;
+    outline: none;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: $small;
+    background-color: $color;
+    color: white;
+    cursor: pointer;
+    transition: all .1s ease-in;
+
+    &:hover {
+        opacity: .8;
+    }
+}

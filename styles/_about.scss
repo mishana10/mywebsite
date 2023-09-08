@@ -1,0 +1,147 @@
+.about {
+    width: 100%;
+    height: 100%;
+
+    &-cont {
+        padding: $big;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        &-left {
+            width: 90%;
+            padding: $small;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            & h3, & p {
+                opacity: .7;
+            }
+
+            & h1, & p {
+                transition: all .3s ease-in-out;
+
+                &:hover {
+                    color: red;
+                }
+            }
+        }
+
+        &-right {
+            width: 100%;
+            padding: $small;
+
+            &-img {
+                height: 100%;
+                width: 90%;
+                position: relative;
+
+                & img {
+                    border: 2px solid $darkBlue;
+                    border-radius: 25px;
+                }
+            }
+        }
+    }
+}
+
+#horse {
+    height: 500px;
+}
+
+#book {
+    position: absolute;
+    height: 300px;
+    width: 220px;
+    right: 30px;
+    bottom: -50px;
+}
+
+#komp {
+    position: absolute;
+    height: 250px;
+    width: 250px;
+    right: 0;
+    top: 25px;
+}
+
+@media screen and (max-width: 1440px) {
+    #horse {
+        height: 300px;
+    }
+    
+    #komp {
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        right: -40px;
+        bottom: 200px;
+    }
+    
+    #book {
+        position: absolute;
+        height: 280px;
+        width: 200px;
+        right: 100px;
+        top: 150px;
+    }
+
+    #footer-about {
+        top: 1100px;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .about-cont {
+        padding: $small;
+    }
+    
+    #komp {
+        position: absolute;
+        height: 200px;
+        width: 200px;
+        right: -20px;
+        top: 350px;
+    }
+
+    #book {
+        position: absolute;
+        height: 250px;
+        width: 180px;
+        right: 0px;
+        top: 600px;
+    }
+
+    #footer-about {
+        top: 1500px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about-cont {
+        padding: .5rem;
+        grid-template-columns: 1fr;
+    }
+
+    #komp {
+        position: absolute;
+        height: 250px;
+        width: 250px;
+        right: 70px;
+        top: 350px;
+    }
+
+    #book {
+        position: absolute;
+        height: 300px;
+        width: 230px;
+        right: 40px;
+        top: 650px;
+    }
+
+    #footer-about {
+        top: 2200px;
+    }
+
+}
+

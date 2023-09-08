@@ -1,0 +1,131 @@
+#footer-serv {
+    display: block;
+    top: 1550px;
+}
+
+.serv {
+    width: 100%;
+    height: 100%;
+
+    & h1 {
+        margin-top: $small;
+        text-align: center;
+        padding: $small;
+    }
+
+    &-cont {
+        width: 100%;
+        height: 100%;
+        padding: $big;
+
+        &-card {
+            border: 2px solid $darkBlue;
+            border-radius: 25px;
+            margin-bottom: $medium;
+            
+            & h3, & h6, #pricing {
+                text-align: center;
+            }
+
+            & h3{
+                padding: $small;
+                font-size: 2rem;
+                color: $red;
+            }
+
+            & h6 {
+                opacity: .5;
+                margin-bottom: 1rem;
+            }
+
+            &-cont {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                text-align: center;
+
+                &-1, &-2, &-3 {
+                    padding: $small;
+                    margin: $small;
+                    border-radius: 25px;
+                    background-color: $darkBlue;
+                    color: $white;
+
+                    & h4 {
+                        padding-top: .5rem;
+                    }
+
+                    & p {
+                        opacity: .8;
+                        padding: $small;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.serv-cont-card-cont-1 .serv-btn, .serv-cont-card-cont-2 .serv-btn, .serv-cont-card-cont-3 .serv-btn {
+    font-size: 1rem;
+}
+
+.special {
+    grid-template-columns: 1fr 1fr;
+}
+
+.icons {
+    background-color: $white;
+    border-radius: 25%;
+}
+
+@media screen and (max-width: 1200px){
+    #footer-serv {
+        top: 1650px;
+    }
+}
+
+@media screen and (max-width: 1100px){
+    #footer-serv {
+        top: 1800px;
+    }
+}
+
+@media screen and (max-width: 880px){
+    #footer-serv {
+        top: 2400px;
+    }
+
+    .serv-cont-card-cont {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 750px){
+    #footer-serv {
+        top: 2600px;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .serv-cont {
+        padding: $small;
+    }
+
+    .special {
+        grid-template-columns: 1fr;
+    }
+    
+    .serv-cont-card-cont {
+        grid-template-columns: 1fr;
+    }
+    
+    #footer-serv {
+        top: 3000px;
+    }
+}
+
+@media screen and (max-width: 630px){
+    
+    #footer-serv {
+        top: 3400px;
+    }
+}
